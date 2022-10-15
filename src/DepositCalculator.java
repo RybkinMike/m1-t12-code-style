@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class DepositCalculator {
-    double calculateComplexPercent(double a, double y, int d) {
+    double calculateComplexPercent(double a, double y, int d) { //параметрам лучше давать "говорящие" имена.
         double pay = a * Math.pow((1 + y / 12), 12 * d);
         return makeRound (pay, 2);
     }
 
-    double calculateSimplePercent(double doubleAmount, double double_year_rate, int deposit_period) {
-        return makeRound(doubleAmount + doubleAmount * double_year_rate * deposit_period, 2);
+    double calculateSimplePercent(double doubleAmount, double double_year_rate, int deposit_period) { // в параметрах лучше не указывать тип переменной, а также 
+        return makeRound(doubleAmount + doubleAmount * double_year_rate * deposit_period, 2);             // использовать camelCase без подчеркиваний
     }
 
     double makeRound(double value, int places) {
@@ -17,7 +17,7 @@ public class DepositCalculator {
 
     void inputAndOutput() {
         int period;
-        int depositType;
+        int depositType; //  можно отделить переменные от остального кода пустой строкой
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите сумму вклада в рублях:");
